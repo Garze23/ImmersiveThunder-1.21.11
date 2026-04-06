@@ -32,6 +32,7 @@ dependencies {
 }
 
 processResources {
+	inputs.property "mod_id", "immersivethunder"
 	inputs.property "version", project.version
 
 	filesMatching("fabric.mod.json") {
