@@ -36,11 +36,13 @@ processResources {
 	inputs.property "version", project.version
 	inputs.property "mod_id", "immersivethunder"
 	inputs.property "mod_name", "Immersive Thunder"
+	inputs.property "description", "Un mod immersif pour les éclairs de Minecraft"
 	
 	filesMatching("fabric.mod.json") {
 		expand "version": inputs.properties.version,
 		"mod_id": "immersivethunder",
-		"mod_name": "Immersive Thunder"
+		"mod_name": "Immersive Thunder",
+			"description": "Un mod immersif pour les éclairs de Minecraft"
 	}
 }
 
