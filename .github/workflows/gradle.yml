@@ -1,0 +1,26 @@
+name: Java CI with Gradle
+
+on:
+  push:
+    branches: [ "1.21.11" ]
+  pull_request:
+    branches: [ "1.21.11" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up JDK
+      uses: actions/setup-java@v4
+      with:
+        java-version: '21'
+        distribution: 'temurin'
+
+    - name: Give execute permission
+      run: chmod +x gradlew
+
+    - name: Build with Gradle Wrapper
+      run: ./gradlew build
